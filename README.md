@@ -446,9 +446,24 @@
       <div class="autor">Vinicius de Moraes</div>
 
       <p>
-        hjhhgg
-        hjhh
-        jjj
+        Pensem nas crianças 
+        Mudas telepáticas 
+        Pensem nas meninas 
+        Cegas inexatas 
+        Pensem nas mulheres 
+        Rotas alteradas 
+        Pensem nas feridas 
+        Como rosas cálidas 
+        Mas oh não se esqueçam 
+        Da rosa da rosa 
+        Da rosa de Hiroxima 
+        A rosa hereditária 
+        A rosa radioativa 
+        Estúpida e inválida. 
+        A rosa com cirrose 
+        A antirrosa atômica 
+        Sem cor sem perfume 
+        Sem rosa sem nada.
       </p>
 
     </article>
@@ -460,12 +475,39 @@
 
       <div class="autor">Vinicius de Moraes</div>
 
-      <p>
-        <!-- Cole aqui o texto completo do poema,
-        se possuir autorização para publicá-lo. -->
-
-        Tristeza não tem fim.
-        Felicidade sim.
+      <p> 
+      Tristeza não tem fim 
+      Felicidade sim 
+      A felicidade é como a pluma 
+      Que o vento vai levando pelo ar 
+      Voa tão leve Mas tem a vida breve 
+      Precisa que haja vento sem parar 
+      A felicidade do pobre parece 
+      A grande ilusão do carnaval 
+      A gente trabalha o ano inteiro 
+      Por um momento de sonho 
+      Pra fazer a fantasia 
+      De rei ou de pirata ou jardineira 
+      Pra tudo se acabar na quarta-feira 
+      Tristeza não tem fim Felicidade sim 
+      A felicidade é como a gota 
+      De orvalho numa pétala de flor 
+      Brilha tranqüila Depois de leve oscila 
+      E cai como uma lágrima de amor 
+      A felicidade é uma coisa boa 
+      E tão delicada também Tem flores e amores 
+      De todas as cores Tem ninhos de passarinhos 
+      Tudo de bom ela tem 
+      E é por ela ser assim tão delicada 
+      Que eu trato dela sempre muito bem 
+      Tristeza não tem fim Felicidade sim 
+      A minha felicidade está sonhando 
+      Nos olhos da minha namorada 
+      É como esta noite, passando, passando 
+      Em busca da madrugada 
+      Falem baixo, por favor 
+      Pra que ela acorde alegre com o dia 
+      Oferecendo beijos de amor
       </p>
 
     </article>
