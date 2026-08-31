@@ -537,10 +537,14 @@
       <div class="autor">Vinicius de Moraes</div>
 
       <p>
-        <!-- Área reservada para o poema -->
-
-        Que a tristeza te convença
-        que a saudade não compensa...
+     Que a tristeza te convença 
+     Que a saudade não compensa 
+     E que a ausência não dá paz
+     E o verdadeiro amor de quem se ama
+     Tece a mesma antiga trama Que não se desfaz 
+     E a coisa mais divina Que há no mundo 
+     É viver cada segundo 
+     Como nunca mais...
       </p>
 
     </article>
