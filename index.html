@@ -1,292 +1,214 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Florescendo Poesias</title>
     <style>
-        /* --- VARIÁVEIS DE CORES (TEMA ESCURO - PADRÃO) --- */
-        :root {
-            --bg-principal: #120919;
-            --bg-card: #21122e;
-            --bg-header: linear-gradient(135deg, #4a154b, #6b21a8, #a855f7);
-            --texto-principal: #f3e8ff;
-            --texto-suave: #d8b4fe;
-            --cor-destaque: #c084fc;
-            --cor-botao: #3b0764;
-            --cor-borda: #581c87;
-            --sombra: rgba(168, 85, 247, 0.2);
-        }
-
-        /* --- VARIÁVEIS DE CORES (TEMA CLARO) --- */
-        [data-tema="claro"] {
-            --bg-principal: #faf5ff;
-            --bg-card: #ffffff;
-            --bg-header: linear-gradient(135deg, #7e22ce, #a855f7, #c084fc);
-            --texto-principal: #3b0764;
-            --texto-suave: #6b21a8;
-            --cor-destaque: #9333ea;
-            --cor-botao: #f3e8ff;
-            --cor-borda: #e9d5ff;
-            --sombra: rgba(147, 51, 234, 0.15);
-        }
-
-        * {
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f4f0f8;
+            color: #2d1b36;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+            line-height: 1.8;
         }
 
-        body {
-            background-color: var(--bg-principal);
-            color: var(--texto-principal);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* --- CABEÇALHO E MENU --- */
         header {
-            background: var(--bg-header);
+            background-color: #4a2e5b;
             color: #ffffff;
-            padding: 30px 20px 20px;
             text-align: center;
-            box-shadow: 0 4px 20px var(--sombra);
-            position: relative;
+            padding: 2.5rem 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
-        .header-topo {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1000px;
-            margin: 0 auto 15px;
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
         }
 
-        .btn-tema {
-            background-color: rgba(255, 255, 255, 0.2);
-            color: #fff;
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            padding: 8px 16px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: bold;
+        .subtitulo {
+            font-style: italic;
+            color: #d8c2e7;
+            margin-top: 0.5rem;
+            font-size: 1.1rem;
         }
 
-        .btn-tema:hover {
-            background-color: rgba(255, 255, 255, 0.3);
-        }
-
-        header h1 {
-            font-size: 2.2rem;
-            margin-bottom: 8px;
-        }
-
-        /* NAV - MENUS NAVEGÁVEIS */
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 20px;
-            flex-wrap: wrap;
-        }
-
-        .nav-btn {
-            background-color: rgba(255, 255, 255, 0.15);
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .nav-btn:hover, .nav-btn.ativo {
-            background-color: #ffffff;
-            color: #581c87;
-        }
-
-        /* --- CONTEÚDO PRINCIPAL --- */
         main {
-            max-width: 1000px;
-            margin: 30px auto;
-            padding: 0 20px;
-            flex-grow: 1;
-            width: 100%;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
         }
 
-        .pagina {
-            display: none;
-            animation: fadeIn 0.4s ease-in-out;
+        .introducao {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
         }
 
-        .pagina.ativa {
+        blockquote {
+            background-color: #eae0f0;
+            border-left: 4px solid #7b4397;
+            margin: 1.5rem 0;
+            padding: 1rem 1.5rem;
+            font-style: italic;
+        }
+
+        .citacao-autor {
             display: block;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* CARDS E ARTIGOS */
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        article {
-            background-color: var(--bg-card);
-            border: 2px solid var(--cor-borda);
-            border-radius: 16px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        article:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 30px rgba(59, 130, 246, 0.25);
-            border-color: var(--accent-blue);
-        }
-
-        article img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-bottom: 3px solid var(--accent-green);
-        }
-
-        .artigo-conteudo {
-            padding: 24px;
-            box-shadow: 0 8px 20px var(--sombra);
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        article h2 {
-            color: var(--cor-destaque);
-            margin-bottom: 8px;
-            font-size: 1.4rem;
-        }
-
-        .artigo-autor {
-            color: var(--texto-suave);
-            font-size: 0.85rem;
+            margin-top: 0.5rem;
             font-weight: bold;
-            margin-bottom: 15px;
+            font-style: normal;
+            color: #4a2e5b;
         }
 
-        .artigo-texto {
-            line-height: 1.6;
-            color: #cbd5e1;
-            margin-bottom: 20px;
-            flex-grow: 1;
+        .galeria-poemas {
+            margin-top: 3rem;
         }
 
-
-    <header>
-        <div class="header-topo">
-            <span>Agrinho 2026</span>
-            <button class="btn-tema" id="btn-tema">🌙 Tema Escuro</button>
-        </div>
-        <h1>Programa Agrinho 2026</h1>
-        <p>Do Campo à Cidade: Colhendo Oportunidades com Tecnologia</p>
-
-        <nav>
-            <button class="nav-btn ativo" onclick="mudarPagina('inicio')">Início</button>
-            <button class="nav-btn" onclick="mudarPagina('sobre')">Sobre o Agrinho</button>
-            <button class="nav-btn" onclick="mudarPagina('tecnologia')">Tecnologia no Campo</button>
-            <button class="nav-btn" onclick="mudarPagina('projetos')">Projetos 2026</button>
-        </nav>
-    </header>
-
-    <main>
-        <section id="inicio" class="pagina ativa">
-            <div class="card-grid">
-                <article>
-                    <h2>Bem-vindos ao Agrinho 2026</h2>
-                    <p class="artigo-autor">Por: Lara Sophia Ferreira</p>
-                    <p class="artigo-texto">
-                        O Programa Agrinho é uma iniciativa educacional que transforma a realidade de milhares de estudantes. Em 2026, nosso foco principal é unir a tradição do campo às inovações tecnológicas do futuro.
-                    </p>
-                    <div class="acoes">
-                        <button class="btn-curtir">💜 <span>0</span></button>
-                    </div>
-                </article
-
-        /* BOTÕES DE CURTIDA */
-        .acoes {
-            display: flex;
-            gap: 10px;
-        }
-
-        .btn-curtir {
-            background-color: var(--cor-botao);
-            color: var(--texto-principal);
-            border: 1px solid var(--cor-borda);
-            padding: 8px 14px;
+        .cartao-poema {
+            background: #ffffff;
+            border: 1px solid #d8c2e7;
             border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 6px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
 
-        .btn-curtir.curtido {
-            background-color: var(--cor-destaque);
-            color: #ffffff;
+        .cartao-poema h2 {
+            color: #7b4397;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+            border-bottom: 2px solid #eae0f0;
+            padding-bottom: 0.5rem;
         }
 
-        /* --- RODAPÉ --- */
+        .estrofe {
+            margin-bottom: 1.2rem;
+        }
+
         footer {
             text-align: center;
-            margin-top: 50px;
-            padding: 20px;
-            background-color: var(--bg-card);
-            border-top: 2px solid var(--cor-borda);
-            color: var(--texto-suave);
-            margin-top: 40px;
+            padding: 1.5rem;
+            background-color: #331f3d;
+            color: #d8c2e7;
+            font-size: 0.9rem;
+            margin-top: 3rem;
         }
     </style>
 </head>
-
 <body>
 
     <header>
-        <div class="header-topo">
-            <span>Agrinho 2026</span>
-            <button class="btn-tema" id="btn-tema">🌙 Tema Escuro</button>
-        </div>
-        <h1>Programa Agrinho 2026</h1>
-        <p>Do Campo à Cidade: Colhendo Oportunidades com Tecnologia</p>
-
-        <nav>
-            <button class="nav-btn ativo" onclick="mudarPagina('inicio')">Início</button>
-            <button class="nav-btn" onclick="mudarPagina('sobre')">Sobre o Agrinho</button>
-            <button class="nav-btn" onclick="mudarPagina('tecnologia')">Tecnologia no Campo</button>
-            <button class="nav-btn" onclick="mudarPagina('projetos')">Projetos 2026</button>
-        </nav>
+        <h1>Florescendo Poesias</h1>
+        <p class="subtitulo">Olá querido leitor, sente-se e aprecie um bom poema</p>
     </header>
 
     <main>
-        <section id="inicio" class="pagina ativa">
-            <div class="card-grid">
-                <article>
-                    <h2>Bem-vindos ao Agrinho 2026</h2>
-                    <p class="artigo-autor">Por: Lara Sophia Ferreira</p>
-                    <p class="artigo-texto">
-                        O Programa Agrinho é uma iniciativa educacional que transforma a realidade de milhares de estudantes. Em 2026, nosso foco principal é unir a tradição do campo às inovações tecnológicas do futuro.
-                    </p>
-                    <div class="acoes">
-                        <button class="btn-curtir">💜 <span>0</span></button>
-                    </div>
-                </article>
+        <section class="introducao">
+            <p>Poesias podem mudar a forma como você vê o mundo, a forma como você se vê. Ao contrário do que muita gente pensa, poesias não falam somente de amor, mas de tudo que dói e floresce no âmago da alma humana.</p>
+            
+            <blockquote>
+                "Não lemos nem escrevemos poesia por ser algo bonito ou fofo, mas sim porque fazemos parte da raça humana, que é repleta de paixão, e a poesia, o amor e a beleza são as razões pelas quais nos mantemos vivos."
+                <span class="citacao-autor">— Professor John Keating</span>
+            </blockquote>
+        </section>
+
+        <section class="galeria-poemas">
+            
+            <!-- Poema 1 -->
+            <article class="cartao-poema">
+                <h2>1. A Amizade</h2>
+                
+                <p class="estrofe">
+                    A amizade consegue ser tão complexa.<br>
+                    Deixa uns desanimados, outros bem felizes.<br>
+                    É a alimentação dos fracos<br>
+                    É o reino dos fortes.
+                </p>
+
+                <p class="estrofe">
+                    Faz-nos cometer erros<br>
+                    Os fracos deixam se ir abaixo<br>
+                    Os fortes erguem sempre a cabeça<br>
+                    Os assim assumem-nos.
+                </p>
+
+                <p class="estrofe">
+                    Sem pensar conquistamos<br>
+                    o mundo geral<br>
+                    e construímos o nosso pequeno lugar,<br>
+                    deixando brilhar cada estrelinha.
+                </p>
+
+                <p class="estrofe">
+                    Estrelinhas.<br>
+                    Doces, sensíveis, frias, ternurentas.<br>
+                    Mas sempre presentes em qualquer parte.<br>
+                    Os donos da amizade.
+                </p>
+            </article>
+
+            <!-- Poema 2 -->
+            <article class="cartao-poema">
+                <h2>2. Quem Sabe um Dia</h2>
+                
+                <p class="estrofe">
+                    Quem sabe um dia<br>
+                    Quem sabe um seremos<br>
+                    Quem sabe um viveremos<br>
+                    Quem sabe um morreremos!
+                </p>
+
+                <p class="estrofe">
+                    Quem é que<br>
+                    Quem é macho<br>
+                    Quem é fêmea<br>
+                    Quem é humano, apenas!
+                </p>
+
+                <p class="estrofe">
+                    Sabe amar<br>
+                    Sabe de mim e de si<br>
+                    Sabe de nós<br>
+                    Sabe ser um!
+                </p>
+
+                <p class="estrofe">
+                    Um dia<br>
+                    Um mês<br>
+                    Um ano<br>
+                    Um(a) vida!
+                </p>
+                <small>— Mario Quintana</small>
+            </article>
+
+            <!-- Poema 3 -->
+            <article class="cartao-poema">
+                <h2>3. Saudade</h2>
+                
+                <p class="estrofe">
+                    Por que sinto falta de você? Por que esta saudade?<br>
+                    Eu não te vejo, mas imagino suas expressões, sua voz, seu cheiro.<br>
+                    Sua amizade me faz sonhar com um carinho,<br>
+                    Um caminhar à luz da lua, à beira-mar.
+                </p>
+
+                <p class="estrofe">
+                    Saudade: este sentimento de vazio que me tira o sono,<br>
+                    me fazendo sentir num triste abandono, é amizade, eu sei, será amor, talvez...<br>
+                    Só não quero perder sua amizade, esta amizade...<br>
+                    Que me fortalece, me enobrece por ter você.
+                </p>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Florescendo Poesias &copy; Acervo de poesias em domínio público.</p>
+    </footer>
+
+</body>
+</html>
