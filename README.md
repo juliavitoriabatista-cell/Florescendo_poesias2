@@ -521,10 +521,18 @@
       <div class="autor">Vinicius de Moraes</div>
 
       <p>
-        <!-- Área reservada para o poema -->
-
-        De repente, do riso fez-se o pranto,
-        silencioso e branco como a bruma...
+       De repente do riso fez-se o pranto 
+       Silencioso e branco como a bruma 
+       E das bocas unidas fez-se a espuma 
+       E das mãos espalmadas fez-se o espanto. 
+       De repente da calma fez-se o vento 
+       Que dos olhos desfez a última chama 
+       E da paixão fez-se o pressentimento 
+       E do momento imóvel fez-se o drama. 
+       De repente, não mais que de repente 
+       Fez-se de triste o que se fez amante 
+       E de sozinho o que se fez contente. 
+       Fez-se do amigo próximo o distante Fez-se da vida uma aventura errante De repente, não mais que de repente.
       </p>
 
     </article>
