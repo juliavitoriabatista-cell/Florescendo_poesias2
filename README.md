@@ -446,14 +446,9 @@
       <div class="autor">Vinicius de Moraes</div>
 
       <p>
-        <!-- Cole aqui o texto completo do poema, caso tenha
-        autorização para utilizá-lo. -->
-
-        Pensem nas crianças,
-        mudas telepáticas.
-
-        Pensem nas meninas,
-        cegas inexatas.
+        hjhhgg
+        hjhh
+        jjj
       </p>
 
     </article>
@@ -498,10 +493,22 @@
       <div class="autor">Vinicius de Moraes</div>
 
       <p>
-        <!-- Área reservada para o poema -->
-
-        Eu sei que vou te amar
-        por toda a minha vida...
+        Eu sei que vou te amar 
+        Eu sei que vou te amar 
+        Por toda a minha vida eu vou te amar 
+        Em cada despedida eu vou te amar 
+        Desesperadamente 
+        Eu sei que vou te amar 
+        E cada verso meu será pra te dizer 
+        Que eu sei que vou te amar 
+        Por toda a minha vida 
+        Eu sei que vou chorar 
+        A cada ausência tua eu vou chorar, 
+        Mas cada volta tua há de apagar 
+        O que essa ausência tua me causou 
+        Eu sei que vou sofrer 
+        A eterna desventura de viver a espera 
+        De viver ao lado teu Por toda a minha vida.
       </p>
 
     </article>
@@ -559,7 +566,3 @@
 </body>
 </html>
 ```
-
-**O visual fica com esta ideia:** capa roxa → introdução → citação em destaque → cada poema dentro de um “cartão” delicado → rodapé com a frase **“Continue florescendo.”**. Também deixei responsivo para celular.
-
-Se você quiser colocar os poemas completos, basta substituir os trechos dentro de cada `<p>` pelos textos que você tem autorização para publicar.
